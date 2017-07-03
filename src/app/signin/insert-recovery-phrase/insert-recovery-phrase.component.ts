@@ -34,7 +34,7 @@ export class InsertRecoveryPhraseComponent implements OnInit {
         this.router.navigate(['sign-in/new-password']);
     }
 
-    clearError(event) {
+    clearError() {
         this.phraseError = '';
     }
 
