@@ -1,0 +1,21 @@
+.transfer {
+    form {
+        > div {
+            margin: 0 -15px;
+            //flex-wrap: wrap;
+            > div {
+                padding: 0 15px;
+            }
+        }
+        md-input-container {
+            width: 100%;
+        }
+        .current-balanse {
+            margin-bottom: 20px;
+        }
+        button {
+            margin-top: 34px;
+            margin-bottom: 55px;
+        }
+    }
+}

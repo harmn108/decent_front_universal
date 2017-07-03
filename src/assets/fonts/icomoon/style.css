@@ -1,0 +1,137 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?8i2e5z');
+  src:  url('fonts/icomoon.eot?8i2e5z#iefix') format('embedded-opentype'),
+    url('../icomoon.ttf?8i2e5z') format('truetype'),
+    url('fonts/icomoon.woff?8i2e5z') format('woff'),
+    url('fonts/icomoon.svg?8i2e5z#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow:before {
+  content: "\e901";
+  color: #b8c0cf;
+}
+.icon-artist:before {
+  content: "\e902";
+  color: #3378e1;
+}
+.icon-audiobooks:before {
+  content: "\e903";
+  color: #3378e1;
+}
+.icon-books:before {
+  content: "\e904";
+  color: #3378e1;
+}
+.icon-date:before {
+  content: "\e905";
+  color: #b8c0cf;
+}
+.icon-documents:before {
+  content: "\e906";
+  color: #3378e1;
+}
+.icon-download:before {
+  content: "\e907";
+  color: #b8c0cf;
+}
+.icon-facebook:before {
+  content: "\e908";
+  color: #3b5998;
+}
+.icon-feedback:before {
+  content: "\e909";
+  color: #8dffc9;
+}
+.icon-games:before {
+  content: "\e90a";
+  color: #3378e1;
+}
+.icon-instagram:before {
+  content: "\e90b";
+}
+.icon-movies:before {
+  content: "\e90c";
+  color: #3378e1;
+}
+.icon-music:before {
+  content: "\e90d";
+  color: #3378e1;
+}
+.icon-pen:before {
+  content: "\e90e";
+  color: #7f8a9e;
+}
+.icon-photo-cam:before {
+  content: "\e90f";
+  color: #3378e1;
+}
+.icon-pictures:before {
+  content: "\e910";
+  color: #3378e1;
+}
+.icon-plugin:before {
+  content: "\e911";
+  color: #1bb168;
+}
+.icon-profile:before {
+  content: "\e912";
+  color: #fff;
+}
+.icon-purchases:before {
+  content: "\e913";
+  color: #3378e1;
+}
+.icon-report:before {
+  content: "\e914";
+  color: #8dffc9;
+}
+.icon-search-respons:before {
+  content: "\e915";
+  color: #fff;
+}
+.icon-search:before {
+  content: "\e916";
+  color: #9b9b9b;
+}
+.icon-security:before {
+  content: "\e917";
+  color: #3378e1;
+}
+.icon-software:before {
+  content: "\e918";
+  color: #3378e1;
+}
+.icon-upload:before {
+  content: "\e919";
+  color: #b8c0cf;
+}
+.icon-wallet:before {
+  content: "\e91a";
+  color: #3378e1;
+}
+.icon-warning:before {
+  content: "\e91b";
+  color: #ffc400;
+}
+.icon-tube:before {
+  content: "\e900";
+  color: #ce1312;
+}

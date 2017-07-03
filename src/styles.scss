@@ -1,0 +1,480 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';*/
+@import "assets/variable";
+@import "assets/external.css";
+//@import "theme";
+@import url("https://fonts.googleapis.com/css?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,300");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:300,400,600,700");
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+    height: 100%;
+    a {
+
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: $open;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+:host {
+    display: flex;
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mat-raised-button {
+    padding: 10px 15px !important;
+    font-size: 13px !important;
+    text-transform: uppercase;
+    font-family: $montserrat !important;
+    letter-spacing: 3px;
+    border-radius: 3px !important;
+    line-height: normal !important;
+    text-align: center;
+    transition: .2s ease !important;
+    box-shadow: none !important;
+    i {
+        margin-right: 15px;
+        color: $dark-primary;
+        font-size: 14px;
+    }
+    label {
+        cursor: pointer;
+    }
+}
+
+.button-normal {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    &:hover {
+        box-shadow: 0 10px 40px rgba(47, 238, 147, 0.4) !important;
+        background: $primary-hover !important;
+    }
+}
+
+.see-more {
+    color: $dark-accent-400;
+    font: 16px $montserrat;
+    margin: 10px 0 0;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.cta-grey {
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
+    letter-spacing: 0.62px;
+    min-width: 135px !important;
+    &:hover {
+        box-shadow: 0 10px 30px rgba(107, 120, 141, 0.4) !important;
+    }
+}
+
+.cta-green {
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
+    letter-spacing: 3px;
+    min-width: 135px !important;
+    &:hover {
+        box-shadow: 0 10px 40px rgba(47, 238, 147, 0.4) !important;
+    }
+}
+
+.cta-transparent {
+    min-width: 135px !important;
+    background: none !important;
+    color: #fff !important;
+    border: 1px solid #fff !important;
+}
+
+.button-small {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.mat-input-container {
+    width: 100%;
+}
+
+.mat-input-placeholder, .mat-select-placeholder, .mat-select-arrow {
+    color: $dark-accent-400 !important;
+}
+
+.mat-focused .mat-input-placeholder {
+    color: $primary !important;
+}
+
+.mat-progress-bar-buffer {
+    background-color: #BEFFE0 !important;
+}
+
+.mat-input-invalid .mat-input-underline {
+
+    //border-color: $invalid !important;
+}
+
+.mat-input-invalid .mat-input-placeholder {
+    color: $invalid !important;
+    .mat-placeholder-required {
+        color: $invalid !important;
+    }
+    border-color: $invalid !important;
+}
+
+.danger {
+    color: $invalid !important;
+}
+
+.mat-select-trigger {
+    margin: 1em 0;
+    padding-bottom: 6px;
+    height: 27px !important;
+}
+
+.mat-input-element {
+    color: $dark-accent-400 !important;
+    //height: 21px !important;
+}
+
+textarea.mat-input-element {
+    //height: auto !important;
+    //min-height: 21px !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.main-grid {
+    position: relative;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.body {
+    min-height: calc(100vh - 320px);
+}
+
+.text {
+    font-size: 16px;
+    line-height: normal;
+    margin-bottom: 10px;
+    color: $dark-accent-400;
+    font-family: $open;
+    //&.color-dark-accent {
+    //  color:;
+    //}
+    &.caption {
+        color: $caption !important;
+        line-height: 16px;
+        p {
+            color: $caption;
+        }
+    }
+    &.note {
+        font-size: 12px !important;
+    }
+    a {
+        color: $dark-accent-400;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    p {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 10px;
+        color: $dark-accent-400;
+    }
+    img {
+        margin-bottom: 10px;
+    }
+    ul {
+        margin: 10px 0;
+        padding-left: 40px;
+        display: block;
+        list-style-type: disc;
+        li {
+            display: list-item;
+        }
+    }
+    ol {
+        list-style-type: decimal;
+        margin: 10px 0;
+        padding-left: 40px;
+        display: block;
+        li {
+            display: list-item;
+        }
+    }
+    h1, h2, h3, h4, h5, h6 {
+        line-height: normal;
+        margin-bottom: 15px;
+    }
+    strong {
+        font-weight: 700;
+    }
+    em {
+        font-style: italic;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 19px;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    //margin-top: 67px;
+    &.sign {
+        margin-top: 67px;
+        padding-top: 50px;
+        margin-bottom: 50px;
+        min-height: calc(100vh - 358px);
+        h2 {
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: 600;
+            color: $dark-accent-400;
+        }
+        h3 {
+            font-size: 12px;
+            line-height: 19px;
+            color: $dark-accent-400;
+        }
+        .text {
+            //font-size: 12px;
+            //color: $dark-accent-400;
+        }
+        //button {
+        //  margin-top: 28px;
+        //  margin-bottom: 30px;
+        //}
+        //h2 {
+        //  font-size: 15px;
+        //  margin: 0;
+        //  color: $dark-accent-500;
+        //}
+    }
+
+    .wallet,
+    .security,
+    .transfer,
+    .purchases,
+    .my-purchases-item,
+    .artist-profile,
+    .artist-profile-upload,
+    .my-uploads,
+    .warning-delete,
+    .add-item-1-3,
+    .add-item-2-3,
+    .add-item-3-3 {
+        color: $dark-accent-400;
+        font-family: $open;
+        //.mat-raised-button {
+        //    &:hover {
+        //        background: $primary-hover;
+        //        box-shadow: 0 10px 40px rgba(47, 238, 147, 0.4) !important;
+        //    }
+        //}
+        input[type="file"] {
+            display: none;
+        }
+        .mat-input-table > * {
+            display: block;
+            textarea {
+                width: 100% !important;
+            }
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: 600;
+            color: $dark-accent-400;
+        }
+        h3 {
+            font-size: 12px;
+            line-height: 19px;
+            color: $dark-accent-400;
+        }
+        .current-balanse {
+            margin-bottom: 45px;
+            color: $dark-accent-400;
+            span {
+                text-transform: uppercase;
+                color: $primary;
+                margin-right: 10px;
+                font-weight: 600;
+            }
+        }
+        .current-balanse {
+            margin-bottom: 45px;
+            color: $dark-accent-400;
+            span {
+                text-transform: uppercase;
+                color: $primary;
+                margin-right: 10px;
+                font-weight: 600;
+            }
+        }
+        .plus {
+            color: $primary;
+        }
+        .minus {
+            color: $caption;
+        }
+    }
+}
+
+.mat-raised-button.mat-primary[disabled] {
+    background: $dark-accent-200 !important;
+    color: $dark-accent-300 !important;
+    &:hover {
+        box-shadow: none !important;
+    }
+}
+
+h1 {
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 300;
+    color: $dark-accent-500;
+    margin-bottom: 25px;
+}
+
+.link {
+    a {
+        color: $link;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: underline;
+    }
+}
+
+.hint {
+    font-family: $open;
+    margin-bottom: 40px;
+    color: $dark-accent-400;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.phrase {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $open;
+    font-weight: 700;
+    border: 1px solid #444;
+    color: #444;
+}
+
+.active-color {
+    color: $primary;
+}
+
+.slideUp, .slideDown {
+    max-height: 0;
+    overflow-y: hidden;
+    -webkit-transition: max-height 0.5s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out;
+    -o-transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.validation-message {
+    position: relative;
+    padding: 20px;
+    background: #F6F8FB;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: -10px;
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 10px solid #F6F8FB;
+    }
+    h3 {
+        font-family: $open;
+        font-weight: 400;
+        span {
+            font-weight: 700;
+        }
+    }
+}
+
+.error-message {
+    color: $invalid !important;
+}
+
+@media only screen and (max-width: 940px) {
+
+    .sign {
+        margin-top: 60px;
+    }
+    //main{
+    .main-grid {
+        //padding: 0 30px
+    }
+}
+
+@media only screen and (max-width: 720px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .sign {
+        margin-top: 40px;
+        padding-top: 15px;
+    }
+    .inner-main-title {
+        margin-bottom: 25px;
+    }
+    button {
+        padding: 15px !important;
+        letter-spacing: 0;
+    }
+}
+

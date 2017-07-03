@@ -1,0 +1,142 @@
+@import "../../../assets/variable.scss";
+
+main {
+    &.search-component {
+        margin-top: 65px;
+        .dropdown-container {
+            width: 100%;
+            border-bottom: 1px solid #eee;
+            .main-grid {
+                border-left: 1px solid $border;
+                font-size: 0;
+            }
+            .dropdown {
+                display: inline-block;
+                font-size: 13px;
+                height: 50px;
+                font-family: $montserrat;
+                border-right: 1px solid $border;
+                padding: 17px 15px;
+                color: $dark-accent-400;
+                position: relative;
+                cursor: pointer;
+                span {
+                    position: relative;
+                    display: inline-block;
+                    padding-right: 20px;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 0;
+                        width: 0;
+                        height: 0;
+                        border-left: 6px solid transparent;
+                        border-right: 6px solid transparent;
+                        border-top: 8px solid $drop-triangle;
+                    }
+                }
+                //&:after {
+                //    content: "";
+                //    position: absolute;
+                //    top: 50%;
+                //    transform: translateY(-50%);
+                //    right: 0;
+                //    width: 0;
+                //    height: 0;
+                //    border-left: 6px solid transparent;
+                //    border-right: 6px solid transparent;
+                //    border-top: 8px solid $drop-triangle;
+                //}
+
+                .dropdown-content {
+                    //opacity: 0;
+                    max-height: 400px;
+                    overflow: auto;
+                    position: absolute;
+                    top: 50px;
+                    left: -1px;
+                    padding: 0;
+                    margin: 0;
+                    z-index: 2;
+                    border: 1px solid $border;
+                    li {
+                        background: #fff;
+                        height: 50px;
+                        transition: background .2s;
+
+                        &:not(:last-child) {
+                            border-bottom: 1px solid $border;
+                        }
+                        &:hover {
+                            background-color: $border;
+                        }
+                        a {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            color: $dark-accent-400;
+                            padding: 18px 25px 18px 15px;
+                            i {
+                                font-size: 14px;
+                                color: $icon-blue;
+                                margin-right: 14px
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+        #search-results {
+            text-align: center;
+            margin: 64px auto;
+            font-size: 20px;
+            font-family: $montserrat;
+            color: $dark-accent-400;
+        }
+
+        .pagination-container {
+            .pagination {
+                max-width: 550px;
+                margin: 20px auto;
+                .prev, .next {
+                    padding: 12px 23px;
+                    color: $dark-accent-400;
+                    border: 1px solid $border;
+                    font-family: $montserrat;
+                    text-transform: uppercase;
+                    border-radius: 3px;
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+                ul {
+                    vertical-align: middle;
+                    padding: 0;
+                    margin: 0 20px;
+
+                    li {
+                        margin: 0 3px;
+                        padding: 13px 10px;
+                        font-family: $montserrat;
+                        font-size: 13px;
+                        height: 100%;
+                        display: inline-block;
+                        cursor: pointer;
+                        color: $dark-accent-400;
+                        &.splats {
+                            cursor: default;
+                        }
+                        &.selected {
+                            background: $primary;
+                            border-radius: 3px;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

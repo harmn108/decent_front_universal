@@ -1,0 +1,23 @@
+<div *ngIf="!submitted">
+    <h1 class="inner-main-title">Login</h1>
+    <form novalidate (ngSubmit)="login()" [formGroup]="signinForm">
+        <md-input-container>
+            <input mdInput placeholder="E-Mail" formControlName="email" type="email" required/>
+        </md-input-container>
+        <app-control-messages [control]="signinForm.controls.email"></app-control-messages>
+        <md-input-container>
+            <input mdInput placeholder="Password" formControlName="password" type="password"/>
+        </md-input-container>
+        <div *ngIf="formErrors" class="validation-message">
+            <h3 class="error-message" [innerHTML]="formErrors"></h3>
+        </div>
+        <div class="link"><a routerLink="./account-recovery">Forgot password?</a></div>
+        <button class="cta-green" type="submit" md-raised-button [disabled]="!signinForm.valid"
+                color="primary">login
+        </button>
+    </form>
+</div>
+<div *ngIf="submitted">
+    <h1 class="inner-main-title">Please wait...</h1>
+    <md-spinner></md-spinner>
+</div>

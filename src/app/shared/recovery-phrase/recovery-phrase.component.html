@@ -1,0 +1,38 @@
+<div *ngIf="verified">
+    <h1 class="inner-main-title" *ngIf="!headHide">Your Recovery Phrase</h1>
+    <h2 *ngIf="!headHide">Most Secure and Highly Recommended:</h2>
+    <div class="text">The recovery phrase contains 16 words, in a specific order. It is needed in the event
+        that you forget your account password.
+    </div>
+    <div class="phrase">{{decryptedPhrase}}
+    </div>
+    <div class="text caption note">Copy and save this phrase exactly as it is written in a secure folder.
+    </div>
+    <div class="pb-pr-key" *ngIf="currentUser">
+        <h2>Your Private Key:</h2>
+        <h3>{{currentUser.pkey}}</h3>
+        <h2>Your Public Key:</h2>
+        <h3>{{currentUser.pubKey}}</h3>
+    </div>
+    <button type="submit" md-raised-button color="primary" class="button-sign" (click)="changePage()">Ok i saved my
+        phrase
+    </button>
+</div>
+<div *ngIf="!verified">
+    <h2>Please enter your password for Recovery Phrase:</h2>
+    <form novalidate (ngSubmit)="verify()" [formGroup]="phraseForm">
+        <md-input-container>
+            <input mdInput placeholder="Password" type="password" name="password" formControlName="password"
+                   required/>
+        </md-input-container>
+        <app-control-messages [control]="phraseForm.controls.password"></app-control-messages>
+        <br>
+        <div class="validation-message" *ngIf="formErrors">
+            <h3 class="error-message">{{formErrors}}</h3>
+        </div>
+        <br>
+        <button type="submit" md-raised-button color="primary" class="cta-green" [disabled]="!phraseForm.valid">
+            Submit
+        </button>
+    </form>
+</div>

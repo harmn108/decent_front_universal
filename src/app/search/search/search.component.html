@@ -1,0 +1,55 @@
+<main class="search-component">
+    <div class="dropdown-container">
+        <div class="main-grid" fxLayout="row">
+            <div fxFlex.sm="83.333" fxFlexOffset.sm="8.333" fxFlex.xs="83.333" fxFlexOffset.xs="8.333">
+                <div class="dropdown" (click)="dropdownMenu = !dropdownMenu;" (clickOutside)="dropdownMenu = false">
+                    <span>{{chosenCategory || 'All'}}</span>
+                    <ul @dropDown *ngIf="dropdownMenu" class="dropdown-content">
+                        <li  *ngFor="let item of categoryDropDown; let i = index" (click)="changeSelected(i) "
+                            [ngClass]="item.isSelected">
+                            <a routerLink="/search"><i [ngClass]="item.icon"></i>{{item.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div *ngIf="subcategory" class="dropdown" (click)="subcategoryDropDown = !subcategoryDropDown"
+                     (clickOutside)="subcategoryDropDown = false">
+                    <span>{{chosenSubcategory || 'All'}}</span>
+                    <ul  @dropDown *ngIf="subcategoryDropDown" class="dropdown-content">
+                        <li *ngFor="let item of subcategory; let i = index" (click)="chooseSubcategory(i)">
+                            <a routerLink="/search">{{item}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- id's must be changed -->
+    <p *ngIf="(searchName || searchKeyWord) && !noContent" id="search-results" class="main-grid">Search results for "{{ searchName || searchKeyWord }}"</p>
+    <p *ngIf="noContent" id="search-results" class="main-grid">No results for "{{ searchName || searchKeyWord}}"</p>
+
+    <div class="main-grid" fxLayout="row">
+        <div fxFlex.sm="83.333" fxFlexOffset.sm="8.333" fxFlex.xs="83.333" fxFlexOffset.xs="8.333">
+            <app-content-list-item *ngFor="let category of categoriesArray"
+                                   [category]="category" [count]="count" (foundContent)="handleContentData($event)"></app-content-list-item>
+            <!--<div class="pagination-container">-->
+
+            <!--<div class="pagination" fxLayout="row">-->
+            <!--<div class="prev">Prev</div>-->
+            <!--<ul fxLayout="row">-->
+            <!--<li fxFlex="11.111">1</li>-->
+            <!--<li fxFlex="11.111" class="splats">...</li>-->
+            <!--<li fxFlex="11.111">3</li>-->
+            <!--<li fxFlex="11.111">4</li>-->
+            <!--<li fxFlex="11.111" class="selected">5</li>-->
+            <!--<li fxFlex="11.111">6</li>-->
+            <!--<li fxFlex="11.111">7</li>-->
+            <!--<li fxFlex="11.111" class="splats">...</li>-->
+            <!--<li fxFlex="11.111">29</li>-->
+            <!--</ul>-->
+            <!--<div class="next">Next</div>-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>

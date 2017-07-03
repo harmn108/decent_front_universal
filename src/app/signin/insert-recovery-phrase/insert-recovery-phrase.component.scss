@@ -1,0 +1,22 @@
+textarea {
+    resize: none;
+}
+
+h2 {
+    margin-bottom: 60px;
+}
+
+.cta-green {
+    min-width: 220px !important;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+md-input-container {
+    color: #444 !important;
+    line-height: 24px;
+}
+
+md-input-container:not(.md-input-invalid).md-input-focused label {
+    color: blue
+}

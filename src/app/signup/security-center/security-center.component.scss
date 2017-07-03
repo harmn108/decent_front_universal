@@ -1,0 +1,27 @@
+@import "../../../assets/variable";
+
+.text {
+    margin-bottom: 17px;
+    h2 {
+        font-size: 15px;
+        font-weight: 600;
+    }
+}
+
+.link {
+    margin-bottom: 5px;
+}
+
+.button-normal {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 40px rgba(47, 238, 147, 0.4) !important;
+}
+
+@media only screen and (max-width: 480px) {
+    .button-normal {
+        margin-top: 20px;
+        padding: 20px !important;
+    }
+}

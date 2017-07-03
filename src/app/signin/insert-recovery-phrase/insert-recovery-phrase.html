@@ -1,0 +1,12 @@
+<h1 class="inner-main-title">Insert Your Recovery Phrase</h1>
+<h2>Insert the recovery phrase which was generated for you during your account set up, exactly as it was
+    generated, with all 16 words in the specific order listed. </h2>
+<md-input-container>
+    <input mdInput placeholder="Phrase" [(ngModel)]="recoveryPhrase" (input)="clearError()" (keyup.enter)="insertRecoveryPhrase()"/>
+</md-input-container>
+<div *ngIf="phraseError" class="validation-message">
+    <h3 class="error-message">{{phraseError}}</h3>
+</div>
+<button type="submit" md-raised-button color="primary" class="cta-green"
+        (click)="insertRecoveryPhrase()">Continue
+</button>

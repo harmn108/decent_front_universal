@@ -1,0 +1,57 @@
+<div class="artist-profile-upload">
+    <h1>Artist Profile</h1>
+    <div fxLayout="row" class="block-1" fxLayoutWrap fxLayoutAlign="start start">
+        <div class="upload-img new">
+            <div class="img" fxlayout="row" fxLayoutAlign="center center">
+                <i class="icon-photo-cam"></i>
+                <!--<img src="../../../assets/images/autor.png" alt="">-->
+            </div>
+            <button class="cta-grey" type="submit" md-raised-button color="accent">
+                <label for="upload-image">upload pic</label>
+                <input id="upload-image" type="file">
+            </button>
+        </div>
+        <div class="name-description" fxFlex.xs="100">
+            <md-input-container>
+                <input mdInput placeholder="Artist name" type="text"/>
+            </md-input-container>
+            <md-input-container class="example-full-width">
+                <textarea mdInput placeholder="Description/BIO"></textarea>
+            </md-input-container>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutGap="30px" class="block-2" fxLayoutWrap fxLayout.xs="column" fxLayoutGap.xs="10px">
+        <md-input-container fxFlex="50">
+            <input mdInput placeholder="Address" type="text"/>
+        </md-input-container>
+        <div fxFlex="50"></div>
+    </div>
+    <div fxLayout="row" fxLayoutGap="30px" class="block-3" fxLayout.xs="column" fxLayoutGap.xs="10px">
+        <md-select placeholder="Country" fxFlex="50">
+            <md-option>
+                <!--{{// food.viewValue}}-->
+            </md-option>
+        </md-select>
+        <md-input-container fxFlex="50">
+            <input mdInput placeholder="Mobile Phone" type="number"/>
+        </md-input-container>
+    </div>
+    <div class="social-link" fxLayout="row" fxLayoutGap="30px" fxLayoutGap.sm="30px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+        <md-input-container fxFlex="33.333">
+            <input mdInput placeholder="Facebook URL" type="text"/>
+            <div class="facebook"><img src="../../../assets/images/icons/facebook.svg" alt=""></div>
+        </md-input-container>
+        <md-input-container fxFlex="33.333">
+            <input mdInput placeholder="Instagram URL" type="text"/>
+            <div class="instagram"><i class="icon-instagram"></i></div>
+        </md-input-container>
+        <md-input-container fxFlex="33.333">
+            <input mdInput placeholder="Youtube URL" type="text"/>
+            <div class="youtube"><img src="../../../assets/images/icons/youtube.svg" alt=""></div>
+        </md-input-container>
+    </div>
+    <div class="save" fxLayout.xs="row" fxLayoutGap="20px">
+        <button class="cta-grey" fxFlex="135px" fxFlex.xs="50%" type="submit" md-raised-button color="accent">cancel</button>
+        <button class="cta-green" fxFlex="135px" fxFlex.xs="50%" type="submit" md-raised-button color="primary">save</button>
+    </div>
+</div>

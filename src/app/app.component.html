@@ -1,0 +1,19 @@
+<div id="cookie-message-div" class="cookie-message" *ngIf="showCookieMessage" [@slideDownUp]>
+    <div class="container-fluid">
+        <div class="row align-items-center justify-content-sm-between justify-content-start">
+            <div class="note col-md-8 cookie-text">
+                {{ cookieMessage}}
+            </div>
+            <div class="col-md-4 right-block link cookie-actions-block">
+                <a routerLink="/static-pages/cookies-policy" class="more">More Information</a>
+                <button md-raised-button color="primary" type="button" class="btn btn-primary waves-effect waves-light button-sign" tabindex="18"
+                        (click)="closeCookieMessage()">
+                    Accept
+                    &amp;
+                    Continue
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

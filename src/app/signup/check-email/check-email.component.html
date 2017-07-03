@@ -1,0 +1,10 @@
+<h1 class="inner-main-title">Check Your Email Now!</h1>
+<h2>We have sent an email to {{email}}</h2>
+<h3>Please open the email and follow the instructions to complete your account setup.</h3>
+<h3>Didn't receive the email?</h3>
+<div *ngIf="accountError" class="validation-message">
+    <h3 class="error-message">{{accountError}}</h3>
+</div>
+<button type="submit" md-raised-button color="accent" class="cta-grey"
+        (click)="resendEmail()">Resend Verification E-Mail
+</button>

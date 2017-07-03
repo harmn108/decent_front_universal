@@ -1,0 +1,41 @@
+@import "../../../assets/variable";
+
+header {
+    background: #fff;
+    .main-grid {
+        .search {
+            display: none;
+        }
+        .respons-menu {
+            display: none;
+        }
+        .sign {
+            display: none;
+        }
+    }
+}
+
+.cta-green {
+    margin: 35px 0 30px;
+}
+
+.validation-message {
+    margin-bottom: 16px;
+}
+
+.inner-main-title {
+    margin-bottom: 40px;
+}
+
+#agreed-text{
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #7F8A9E;
+
+    a, a:visited{
+        color: #7F8A9E;
+        text-decoration: underline;
+    }
+}
+

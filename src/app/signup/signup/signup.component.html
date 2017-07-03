@@ -1,0 +1,39 @@
+<div *ngIf="!submitted">
+    <h1 class="inner-main-title">Sign Up</h1>
+    <form novalidate (ngSubmit)="onSubmit()" [formGroup]="signupForm">
+        <md-input-container>
+            <input mdInput type="email" name="email" formControlName="email" placeholder="E-Mail" required/>
+        </md-input-container>
+        <app-control-messages [control]="signupForm.controls.email"></app-control-messages>
+        <md-input-container>
+            <input mdInput placeholder="Password" type="password" name="password" formControlName="password"
+                   required />
+        </md-input-container>
+        <app-control-messages [control]="signupForm.controls.password"></app-control-messages>
+        <md-input-container>
+            <input mdInput name="certainPassword" formControlName="certainPassword"
+                   placeholder="Confirm Password"
+                   type="password" required/>
+        </md-input-container>
+        <app-control-messages [control]="signupForm"></app-control-messages>
+        <div *ngIf="accountError" class="validation-message">
+            <h3 class="error-message" [innerHTML]="accountError"></h3>
+        </div>
+
+        <div>
+            <md-checkbox formControlName="agreed" color="primary"></md-checkbox>
+            <span id="agreed-text">Hereby you are agreeing to our <a routerLink="/static-pages/terms-of-use">Terms of Use</a>,
+                <a routerLink="/static-pages/privacy-policy">Privacy Policy</a> and
+                <a routerLink="/static-pages/data-processing">Processing of Personal Data</a>.</span>
+        </div>
+
+        <button class="cta-green" type="submit" md-raised-button color="primary"
+                [disabled]="!signupForm.valid">Sign up
+        </button>
+    </form>
+</div>
+<div *ngIf="submitted">
+    <h1 class="inner-main-title">Please wait...</h1>
+    <md-spinner></md-spinner>
+</div>
+

@@ -1,0 +1,33 @@
+<div *ngIf="!confirmed">
+    <h2>Please wait ...</h2>
+    <section class="example-section">
+        <md-card>
+            <md-card-content>
+                <md-progress-bar
+                [color]="progress.color"
+                [mode]="progress.mode"
+                [value]="progress.value"
+                [bufferValue]="progress.bufferValue">
+                </md-progress-bar>
+            </md-card-content>
+        </md-card>
+    </section>
+</div>
+<div *ngIf="confirmed && !confirmFail">
+    <h1 class="inner-main-title">Security center</h1>
+    <h2>As a blockchain security protocol, please use the following to ensure your account
+        security.</h2>
+    <h2>This is the ONLY way to recover your account if you forget your password.</h2>
+    <button type="submit" md-raised-button color="primary" class="button-normal" routerLink="../../add-recovery-phrase">
+        generate RECOVERY PHRASE
+    </button>
+    <div class="link"><a routerLink="../../password-hint">Skip this step</a></div>
+    <div class="text caption note">NOT RECOMMENDED…. But if you are extremely confident in your ability to
+        remember your account password then you may proceed without this security setting
+    </div>
+</div>
+<div *ngIf="confirmFail">
+    <div class="validation-message">
+        <h3 class="error-message">Confirmation failed</h3>
+    </div>
+</div>

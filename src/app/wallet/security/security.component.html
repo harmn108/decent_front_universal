@@ -1,0 +1,52 @@
+<div class="security">
+    <h1>Security Center</h1>
+    <ul class="phrase-hint">
+        <li [ngClass]="opened.phrase">
+            <div class="button-phrase" fxLayout="row">
+                <div fxFlex="50">
+                    <div>Recovery Phrase</div>
+                </div>
+                <div fxFlex="50">
+                    <div class="link" *ngIf="!phraseSaved"><a (click)="generatePhrase()">Generate</a></div>
+                    <div class="link active-color" *ngIf="phraseSaved && !phrase"><a (click)="generatePhrase()">Generated</a></div>
+                </div>
+            </div>
+            <div class="drop-prase" *ngIf="phrase">
+                <div class="phras-content">
+                    <app-recovery-phrase (phraseInfo)="handleContentData($event)"></app-recovery-phrase>
+                </div>
+            </div>
+        </li>
+        <li [ngClass]="opened.hint">
+            <div class="button-hint" fxLayout="row">
+                <div fxFlex="50">
+                    <div *ngIf="!passwordHint || !showHint">Password Hint</div>
+                    <div *ngIf="passwordHint && showHint">Your Password Hint is</div>
+                </div>
+                <div fxFlex="50">
+                    <div class="link link" *ngIf="!passwordHint"><a (click)="openHint()">Add</a></div>
+                    <div class="link active-color" *ngIf="passwordHint && !showHint"><a (click)="openHint()">Show</a></div>
+                </div>
+            </div>
+            <div class="drop-hint" *ngIf="!passwordHint && showHint">
+                <div class="hint-content">
+                    <div class="text note">Create a password hint as a reminder in case you forget your password</div>
+                    <md-input-container>
+                        <input mdInput placeholder="Example: My favorite " [(ngModel)]="hint" (input)="clearError()" (keyup.enter)="saveHint()"/>
+                    </md-input-container>
+                    <div *ngIf="accountError" class="validation-message">
+                        <h3 class="error-message">{{accountError}}</h3>
+                    </div>
+                    <button class="button-sign" type="submit" md-raised-button color="primary" (click)="saveHint()">
+                        Save
+                    </button>
+                </div>
+            </div>
+            <div class="drop-hint" *ngIf="passwordHint && showHint">
+                <div class="hint-content">
+                    <div class="hint">{{passwordHint}}</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

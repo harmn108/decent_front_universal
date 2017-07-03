@@ -1,0 +1,110 @@
+@import "../../../assets/variable";
+
+.wallet {
+    font-family: $open;
+    .wallet-address, .encrypted-alternate {
+        margin-bottom: 10px;
+        h2, h3 {
+            margin: 0;
+        }
+        h3 {
+            font-weight: 400;
+        }
+    }
+    .encrypted-alternate {
+        margin-bottom: 35px;
+    }
+    .current-balanse {
+        margin-bottom: 40px;
+    }
+    .cta-green {
+        min-width: 200px !important;
+        text-align: left;
+        margin-bottom: 50px;
+    }
+    //.button-list {
+    //    position: relative;
+    //    ul {
+    //        li {
+    //            margin-bottom: 20px;
+    //            .cta-green {
+    //                min-width: 200px !important;
+    //                text-align: left;
+    //                i {
+    //                    color: $dark-primary;
+    //                    margin-right: 10px;
+    //                    font-size: 12px;
+    //                }
+    //            }
+    //            &:last-of-type {
+    //                margin: 0;
+    //            }
+    //        }
+    //    }
+    //    img {
+    //        position: absolute;
+    //        top: 50%;
+    //        width: 130px;
+    //        left: 240px;
+    //        transform: translateY(-50%);
+    //    }
+    //}
+    .transactions {
+        ul {
+            li {
+                padding: 16px 0 16px 10px;
+                border-top: 1px solid $border;
+                span {
+                    display: block;
+                    font-weight: 400;
+                }
+                div {
+                    &:last-of-type {
+                        text-align: right;
+                    }
+                    &:first-of-type {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        .empty {
+            padding-top: 16px;
+            font-size: 12px;
+            border-top: 1px solid $border;
+            color: $dark-accent-400;
+            padding-left: 10px;
+        }
+    }
+}
+.transaction-memo{
+    font-size: 12px;
+    font-weight: normal;
+}
+@media only screen and (max-width: 940px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+    .wallet {
+        padding: 0;
+        //.button-list {
+        //    ul {
+        //        li {
+        //        }
+        //    }
+        //    img {
+        //        width: 30%;
+        //        left: auto;
+        //        right: -7.333%;
+        //        z-index: -1;
+        //    }
+        //}
+    }
+    width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* height: 16px; */
+    display: inline-block;
+    white-space: nowrap;
+}

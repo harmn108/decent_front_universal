@@ -1,0 +1,109 @@
+@import "../../../assets/variable";
+
+.my-uploads {
+    .cta-green {
+        margin-bottom: 40px;
+    }
+    > ul, .loader {
+        margin-bottom: 20px;
+        > li, > div {
+            padding: 16px 0 16px 10px;
+            border-top: 1px solid $border;
+            span {
+                display: block;
+                font-weight: 400;
+            }
+            &:first-of-type {
+                border: none;
+            }
+            a {
+                color: $dark-accent-400;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            div {
+                ul {
+                    text-align: right;
+                    .edit {
+                        a {
+                            text-decoration: underline;
+                        }
+                        i {
+                            font-size: 10px;
+                            margin-right: 5px;
+                            color: $dark-accent-400;
+                        }
+                    }
+                    .delete {
+                        margin-left: 20px;
+                        a {
+                            color: $caption;
+                        }
+                    }
+                }
+                &:first-of-type {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .loader {
+        margin-bottom: 0;
+        border-bottom: 1px solid $border;
+        h3 {
+            margin-bottom: 10px;
+            span {
+                font-weight: 400;
+            }
+        }
+    }
+    .message {
+        margin-bottom: 50px;
+        color: $dark-accent-400;
+        font-weight: 400;
+        position: relative;
+        i {
+            position: absolute;
+            margin-right: 15px;
+            font-size: 16px;
+            vertical-align: middle;
+            color: $link;
+        }
+        div {
+            padding-left: 35px;
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .my-uploads {
+        > ul, .loader {
+            > li, > div {
+                .purchase-name {
+                    a {
+                        display: inline-block;
+                        width: 140px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .my-uploads {
+        > ul, .loader {
+            > li, > div {
+                .purchase-name {
+                    a {
+                        width: 80px;
+                    }
+                }
+            }
+        }
+    }
+}

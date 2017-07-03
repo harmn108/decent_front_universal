@@ -1,0 +1,38 @@
+<app-header></app-header>
+
+<div class="main-grid body" *ngIf="mobileView">
+    <div fxLayout="row">
+        <aside fxFlex="20.777" fxFlex.sm="20.777" fxFlexOffset.sm="4.1665" fxFlex.xs="100">
+            <div class="menu">
+                <ul>
+                    <li *ngFor="let item of listMenu; let i = index" (click)="changeSelected(i)"
+                        [routerLink]="item.routerLink" routerLinkActive="selected"
+                        [routerLinkActiveOptions]="{exact: true}">
+                        <a>
+                            <i [ngClass]="item.icon"></i>{{item.name}} <i class="icon-arrow"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!--<ul>-->
+                    <!--<li>-->
+                        <!--<a href="">-->
+                            <!--<i class="icon-artist"></i>Artist Profile <i class="icon-arrow"></i>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li class="disabled">-->
+                        <!--<a href="">-->
+                            <!--<i class="icon-upload"></i>Uploads <i class="icon-arrow"></i>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            </div>
+        </aside>
+        <main class="profile" fxFlex="66.666" fxFlex.sm="63.888" fxFlex.xs="83.333" fxFlexOffset.xs="8.333">
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+</div>
+
+<app-footer></app-footer>
+
+

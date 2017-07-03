@@ -1,0 +1,12 @@
+<div class="mocks">
+  <header>
+    <span>{{type | titlecase}}</span>
+
+    <span fxFlex></span>
+    <button md-button>see more</button>
+  </header>
+
+  <div fxLayout="row">
+    <app-trending-item fxFlex *ngFor="let content of contents" [content]="content"></app-trending-item>
+  </div>
+</div>

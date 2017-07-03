@@ -1,0 +1,60 @@
+<div class="wallet">
+    <h1>Your Wallet</h1>
+
+    <div class="wallet-address">
+        <h2>Your Wallet address is your e-mail:</h2>
+        <h3>{{accountService.email}}</h3>
+    </div>
+    <div class="encrypted-alternate">
+        <h2>or use Encrypted alternate</h2>
+        <h3>{{account.name}}</h3>
+    </div>
+
+    <div class="current-balanse"><span>CURRENT BALANCE:</span>{{balance | DCT}}</div>
+
+    <button class="cta-green" type="submit" md-raised-button color="primary" routerLink="./transfer"><i
+        class="icon-plugin"></i>transfer DCT
+    </button>
+
+    <div class="transactions">
+        <h2>Transactions</h2>
+        <md-spinner *ngIf="!transactions; else blockTransactions"></md-spinner>
+        <ng-template #blockTransactions>
+            <ul>
+                <li fxLayout="row" *ngFor="let transaction of transactions">
+                    <div fxFlex="16.666"><h3>{{transaction.m_timestamp | date: 'MMMM'}}<span>{{transaction.m_timestamp | date: 'dd'}}</span>
+                    </h3></div>
+                    <div fxFlex="58.333" fxFlex.xs="58.333">
+
+                        <h3 *ngIf="account.id == transaction.m_from_account; else receivedTextBlock">
+                            Paid to {{transaction.m_to_account}}
+                            <span>Sent</span>
+                            <em *ngIf="transaction.m_memo_string" class="transaction-memo"><br />memo: {{transaction.m_memo_string}}</em>
+                        </h3>
+
+                        <ng-template #receivedTextBlock>
+                            <h3>
+                                Payment from {{transaction.m_from_account}}
+                                <span>Received</span>
+                                <em *ngIf="transaction.m_memo_string" class="transaction-memo">memo: {{transaction.m_memo_string}}</em>
+                            </h3>
+                        </ng-template>
+
+
+                    </div>
+                    <div fxFlex="24.999">
+                        <h3 *ngIf="account.id == transaction.m_from_account; else receivedDCTBlock" class="minus">
+                            -{{transaction.m_transaction_amount.amount | DCT}}
+                        </h3>
+                        <ng-template #receivedDCTBlock>
+                            <h3 class="plus">
+                                {{transaction.m_transaction_amount.amount | DCT}}
+                            </h3>
+                        </ng-template>
+                    </div>
+                </li>
+            </ul>
+            <div class="empty" *ngIf="">No transactions yet</div>
+        </ng-template>
+    </div>
+</div>

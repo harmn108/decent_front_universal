@@ -1,0 +1,15 @@
+
+md-icon{
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+
+  &.selected{
+    color: cadetblue;
+  }
+
+  &:hover{
+    cursor: pointer;
+  }
+}
+

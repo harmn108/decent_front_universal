@@ -1,0 +1,45 @@
+@import "../../../assets/variable";
+
+.add-item-2-3 {
+    div.active-color {
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: $montserrat;
+    }
+    .upload-area {
+        padding: 20px;
+        background: #F6F8FB;
+        margin-bottom: 10px;
+        .cta-grey {
+            min-width: 160px !important;
+        }
+        h3 {
+
+        }
+    }
+    .block-1, .block-2 {
+        margin-bottom: 30px;
+    }
+    h3 {
+        padding-left: 20px;
+        font-weight: 400;
+    }
+    .next-back {
+        font-size: 0;
+        margin-bottom: 50px;
+        .mat-raised-button {
+            //margin-right: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .add-item-2-3 {
+        .next-back {
+            .cta-green, .cta-grey {
+                min-width: 0 !important;
+            }
+        }
+    }
+}

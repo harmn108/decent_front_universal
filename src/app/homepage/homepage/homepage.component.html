@@ -1,0 +1,103 @@
+<md-sidenav-container class="home-page">
+    <app-header>
+    </app-header>
+
+    <main [ngClass]="homemain">
+        <div class="cover">
+            <img src="../../../assets/images/Headphones.png" alt="">
+            <div class="main-grid">
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div class="title" fxFlex="66.666" fxFlex.xs="83.333">
+                        <h1>The <span>Blockchain</span> exchange platform for any digital content.</h1>
+                        <div class="text">DECENT GO is the new and secure way to instantly share
+                            movies, music, pictures, games, software, articles, or
+                            documents on a peer to peer, decentralized network
+                            without the hassle of middleman control.
+                        </div>
+                        <button *ngIf="!accountService.logedIn" md-raised-button color="accent" class="cta-grey" routerLink="/sign-up">Sign up for free</button>
+                    </div>
+                </div>
+                <img src="../../../assets/images/Pencils.png" alt="">
+            </div>
+        </div>
+        <div class="search-block">
+            <!--<div class="main-grid">-->
+                <!--<div fxLayout="row" fxLayoutAlign="center start" fxLayoutAlign.xs="start start">-->
+                    <!--<div fxFlex="66.666" fxFlex.xs="83.333" fxFlexOffset.xs="8.333" class="search">-->
+                        <!--<label>-->
+                            <!--<input type="text" placeholder="Search for content or author" [(ngModel)]="searchContent" (keyup.enter)="search()">-->
+                        <!--</label>-->
+                        <!--<span>or</span>-->
+                        <!--<button type="submit" class="cta-green" md-raised-button color="primary">upload</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="list-content">
+            <div class="main-grid" fxLayout="row">
+                <div fxFlex.sm="83.333" fxFlexOffset.sm="8.333" fxFlex.xs="83.333" fxFlexOffset.xs="8.333">
+                    <h2>Look what's trending in the DECENT community</h2>
+                    <app-content-list-item *ngFor="let categoryName of contentArray"
+                                           [categoryName]="categoryName" [searchKey]="searchContent">
+                    </app-content-list-item>
+                </div>
+            </div>
+            <!-- style must be removed -->
+            <div class="text see-more" style="pointer-events: none; cursor: default;"><a routerLink="/search" >See all categories</a></div>
+        </div>
+        <div class="explore">
+            <div class="main-grid" fxLayout="row" fxLayoutAlign="center start">
+                <div fxFlex="83.333" fxFlex.sm="66.666">
+                    <h3>Why should you buy content through DECENT GO?</h3>
+                    <div class="text">DECENT GO allows you to safely browse
+                        and purchase a variety of digital content created by
+                        individuals from around the world on a secure, decentralized,
+                        peer to peer blockchain network
+                    </div>
+                    <button md-raised-button color="primary" class="cta-green" (click)="contentBuyRedirect()">Explore</button>
+                </div>
+            </div>
+        </div>
+        <div class="sign-up">
+            <div class="main-grid">
+                <div fxLayout="row" fxLayoutAlign="center start">
+                    <div fxFlex="83.333" fxFlex.sm="66.666">
+                        <h3>Call for creators</h3>
+                        <div class="text">Join the digital content revolution
+                            with DECENT and experience full control of your
+                            creative content with no middleman. You can freely
+                            publish any authentic & legal digital content knowing
+                            that your information is safely stored in Blockchain’s
+                            heavily encrypted security network.
+                        </div>
+                        <button md-raised-button color="primary" class="cta-green" (click)="callForCreators()">Explore</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div id="trending-container">-->
+        <!--<app-trending-list [type]="'audio'"></app-trending-list>-->
+        <!--<app-trending-list [type]="'video'"></app-trending-list>-->
+        <!--<app-trending-list [type]="'image'"></app-trending-list>-->
+        <!--<app-trending-list [type]="'soft'"></app-trending-list>-->
+        <!--</div>-->
+
+        <!--<div id="consumer-container">-->
+        <!--<h2>Consumer value proposition</h2>-->
+        <!--<button md-raised-button color="accent" routerLink="/sign-up">Sign up</button>-->
+        <!--</div>-->
+
+        <!--<div id="creators-container">-->
+        <!--<h2>Calling all creators</h2>-->
+        <!--<button md-raised-button color="accent">Find out more</button>-->
+        <!--</div>-->
+    </main>
+
+    <app-footer></app-footer>
+    <!--<footer>-->
+    <!--<h3>footer</h3>-->
+    <!--</footer>-->
+</md-sidenav-container>
+
+
+

@@ -1,0 +1,14 @@
+<h1 class="inner-main-title">Enter Your E-Mail</h1>
+<h2>Please enter your e-mail address so we can verify your account and send your password hint.</h2>
+<form novalidate (ngSubmit)="mailForHint()" [formGroup]="emailForm">
+    <md-input-container>
+        <input mdInput placeholder="E-Mail" formControlName="email" type="email" required/>
+    </md-input-container>
+    <app-control-messages [control]="emailForm.controls.email"></app-control-messages>
+    <div *ngIf="accountError" class="validation-message">
+        <h3 class="error-message">{{accountError}}</h3>
+    </div>
+    <button class="cta-green" type="submit" md-raised-button color="primary" [disabled]="!emailForm.valid">
+        Continue
+    </button>
+</form>

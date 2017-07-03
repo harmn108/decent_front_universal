@@ -1,0 +1,44 @@
+<header [ngClass]="homeheader">
+    <div class="main-grid">
+        <div fxFlex.sm="91.667" fxFlexOffset.sm="4.16" fxFlex.xs="83.334" fxFlexOffset.xs="8.333" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutWrap>
+            <div class="logo">
+                <a routerLink="/"><img src="../../../assets/images/logo.svg" alt=""></a>
+            </div>
+            <!--<div *ngIf="disableSearch" class="search dark-theme">-->
+                <!--<label>-->
+                    <!--<input type="text" placeholder="Search for content or author" [(ngModel)]="searchContent" (keyup.enter)="search()">-->
+                <!--</label>-->
+                <!--<span>or</span>-->
+                <!--<button type="submit" class="button-small" md-raised-button color="primary">upload</button>-->
+            <!--</div>-->
+            <ul class="header-menu">
+                <!--<li *ngIf="disableSearch" class="search-button"><a href=""><img src="../../../assets/images/icons/search-respons.svg" alt=""></a></li>-->
+                <li class="profile" *ngIf="logedIn" (clickOutside)="dropdownMenuToggle = false">
+                    <span class="profile-mail" (click)="toggleDropdownMenu()">{{email}}</span>
+                    <i class="icon-profile profile-icon" (click)="toggleDropdownMenu()"></i>
+                    <div class="dropdown-menu"
+                         *ngIf="dropdownMenuToggle" (click)="dropdownMenuToggle = false">
+                        <ul>
+                            <li><a routerLink="/wallet">Wallet</a></li>
+                            <li><a routerLink="/wallet/security">Security</a></li>
+                        </ul>
+                        <ul>
+                            <li><a routerLink="/static-pages/terms-of-use">Terms & Conditions</a></li>
+                            <li><a (click)="signOunt()">Log out</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div *ngIf="headerButtons" class="header-sign" fxFlex.xs="100">
+                <ul>
+                    <li *ngIf="signUpButton">
+                        <button md-raised-button class="cta-transparent" routerLink="/sign-up">Sign up</button>
+                    </li>
+                    <li *ngIf="signInButton">
+                        <button md-raised-button class="cta-transparent" routerLink="/sign-in">Log in</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>

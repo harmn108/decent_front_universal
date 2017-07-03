@@ -1,0 +1,44 @@
+<div class="transfer">
+    <h1>Transfer DCT</h1>
+    <h2>Enter the amount of DCT you would like to send to the recipient’s account.</h2>
+
+    <h2 class="text caption" *ngIf="apiError" >Transfer Error. Please make sure all required fields are filled out correctly</h2>
+
+    <form (ngSubmit)="onSubmit()" [formGroup]="transferForm">
+
+        <div fxLayout="row" fxLayoutWrap>
+            <div fxFlex="50" fxFlex.sm="66.664" fxFlex.xs="100">
+                <md-input-container>
+                    <input mdInput placeholder=" DCT Amount" type="number" formControlName="amount" required />
+                </md-input-container>
+
+                <div *ngIf="formErrors.amount" class="alert alert-danger">
+                    {{ formErrors.amount }}
+                </div>
+
+                <div class="current-balanse"><span>CURRENT BALANCE:</span>{{balance | DCT}}</div>
+            </div>
+
+            <div fxFlex="50" fxFlex.sm="66.664" fxFlex.xs="100">
+                <md-input-container>
+                    <input mdInput placeholder="Recipient E-mail or username" type="email" formControlName="sendTo" required />
+                </md-input-container>
+
+                <div *ngIf="formErrors.sendTo" class="alert alert-danger">
+                    {{ formErrors.sendTo }}
+                </div>
+            </div>
+
+
+
+            <div fxFlex="50" fxFlex.sm="66.664" fxFlex.xs="100">
+                <md-input-container>
+                    <input mdInput placeholder="Memo" type="text" formControlName="memo"/>
+                </md-input-container>
+            </div>
+        </div>
+
+        <md-spinner *ngIf="submitted"></md-spinner>
+        <button class="button-sign" type="submit" md-raised-button color="primary" [disabled]="!transferForm.valid">transfer</button>
+    </form>
+</div>

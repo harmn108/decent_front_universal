@@ -1,0 +1,36 @@
+<!--<div class="list-container">-->
+    <!--<div class="header-container" fxLayout="row" fxLayoutAlign="space-between center">-->
+        <!--<h2 *ngIf="contentData">{{contentData.categoryName}}</h2>-->
+        <!--<a *ngIf="seeMore" (click)="filterByCategory(category)" class="see-more">See more</a>-->
+    <!--</div>-->
+    <!--<div style="clear:both;"></div>-->
+    <!--<div fxLayout="row" class="items-container" fxLayoutWrap *ngIf="contentData">-->
+        <!--<div class="list-item" fxFlex="20" fxFlex.xs="50" *ngFor="let data of contentData.result">-->
+            <!--<div class="image-container">-->
+                <!--<div [ngStyle]="{'background-image': 'url(' +  data.synopsis.url + ')'}" class="image-shadow"></div>-->
+                <!--<img [src]="data.synopsis.url" alt="">-->
+            <!--</div>-->
+            <!--<h3>{{data.synopsis.title}}</h3>-->
+            <!--<span class="price">{{data.price.amount | DCT}}</span>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="list-container">
+    <div class="header-container" fxLayout="row" fxLayoutAlign="space-between center">
+        <h2 *ngIf="testContent">{{categoryName.name}}</h2>
+
+        <a *ngIf="seeMore" class="see-more" style="pointer-events: none; cursor: default;">See more</a>
+    </div>
+    <div style="clear:both;"></div>
+    <div fxLayout="row" class="items-container" fxLayoutWrap *ngIf="contentData">
+        <div class="list-item" fxFlex="20" fxFlex.xs="50" *ngFor="let data of testContent">
+            <div class="image-container">
+                <div [ngStyle]="{'background-image': 'url(' +  data.image + ')'}" class="image-shadow"></div>
+                <img [src]="data.image" alt="">
+            </div>
+            <h3>{{data.title}}</h3>
+            <span class="price">{{data.price}}</span>
+        </div>
+    </div>
+</div>
+
