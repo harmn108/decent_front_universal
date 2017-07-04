@@ -1,36 +1,24 @@
-@import "../../../assets/variable";
+.add-item-3-3 div.active-color {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif; }
 
-.add-item-3-3 {
-    div.active-color {
-        margin-bottom: 30px;
-        font-size: 20px;
-        font-weight: 600;
-        font-family: $montserrat;
-    }
-    h3 {
-        font-weight: 400;
-    }
-    .block-1 {
-        margin-bottom: 50px;
-    }
-    .publish {
-        margin-bottom: 50px;
-    }
-    .mat-select {
-        width: 100%;
-    }
-}
+.add-item-3-3 h3 {
+  font-weight: 400; }
+
+.add-item-3-3 .block-1 {
+  margin-bottom: 50px; }
+
+.add-item-3-3 .publish {
+  margin-bottom: 50px; }
+
+.add-item-3-3 .mat-select {
+  width: 100%; }
 
 @media only screen and (max-width: 480px) {
-    .add-item-3-3 {
-        .publish {
-            .cta-green, .cta-grey {
-                min-width: 0 !important;
-            }
-        }
-        h2 {
-            margin-top: 20px;
-            margin-bottom: 40px;
-        }
-    }
-}
+  .add-item-3-3 .publish .cta-green, .add-item-3-3 .publish .cta-grey {
+    min-width: 0 !important; }
+  .add-item-3-3 h2 {
+    margin-top: 20px;
+    margin-bottom: 40px; } }

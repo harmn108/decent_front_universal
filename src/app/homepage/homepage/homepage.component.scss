@@ -1,306 +1,236 @@
-@import "../../../assets/variable";
+.home-page #line-holder {
+  width: 70px;
+  margin: 20px auto;
+  border-bottom: 1px solid #9d9d9d; }
 
-header {
+.home-page #trending-container {
+  width: 800px;
+  margin: 20px auto; }
 
-}
+.home-page app-trending-list {
+  display: block;
+  margin: 60px 0; }
 
-.home-page {
-    #line-holder {
-        width: 70px;
-        margin: 20px auto;
-        border-bottom: 1px solid #9d9d9d;
-    }
+.home-page main {
+  margin-top: 65px; }
 
-    #trending-container {
-        width: 800px;
-        margin: 20px auto;
-    }
+.home-page main .cover {
+  position: relative;
+  height: 535px;
+  background: #1FDA81;
+  background-size: 50%; }
 
-    app-trending-list {
-        display: block;
-        margin: 60px 0;
-    }
+.home-page main .cover > img {
+  position: absolute;
+  width: 417px;
+  right: 20px;
+  bottom: 0;
+  pointer-events: none; }
 
-    main {
-        margin-top: 65px;
-        .cover {
-            position: relative;
-            height: 535px;
-            background: $primary;
-            background-size: 50%;
-            > img {
-                position: absolute;
-                width: 417px;
-                right: 20px;
-                bottom: 0;
-                pointer-events: none;
-            }
-            .main-grid {
-                height: inherit;
-                > img {
-                    position: absolute;
-                    width: 166px;
-                    left: -90px;
-                    bottom: 0;
-                    pointer-events: none;
-                }
-                > div {
-                    height: inherit;
-                    .title {
-                        text-align: center;
-                        * {
-                            color: #fff;
-                            font-family: $montserrat;
-                        }
-                        h1 {
-                            margin-bottom: 20px;
-                            font-weight: 500;
-                            span {
-                                text-decoration: underline;
-                            }
-                        }
-                        .text {
-                            margin-bottom: 40px;
-                            letter-spacing: 0.76px;
-                        }
-                        .cta-grey {
-                            width: 190px;
-                        }
-                    }
-                }
-            }
-        }
-        .search-block {
-            margin-bottom: 80px;
-            border-bottom: 1px solid $border;
-            .search {
-                padding: 40px 0;
-                span {
-                    font-family: $montserrat;
-                    font-size: 13px;
-                    margin: 0 10px;
-                    color: #94A0B5;
-                }
-                label {
-                    position: relative;
-                    display: inline-block;
-                    width: calc(100% - 180px);
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        left: 12px;
-                        top: 14px;
-                        width: 12px;
-                        height: 13px;
-                        background: url("../../../assets/images/icons/search.svg");
-                        background-size: 12px 13px;
-                    }
-                    ::-webkit-input-placeholder { /* Chrome */
-                        color: $dark-accent-400;
-                    }
+.home-page main .cover .main-grid {
+  height: inherit; }
 
-                    :-ms-input-placeholder { /* IE 10+ */
-                        color: $dark-accent-400;
-                    }
+.home-page main .cover .main-grid > img {
+  position: absolute;
+  width: 166px;
+  left: -90px;
+  bottom: 0;
+  pointer-events: none; }
 
-                    ::-moz-placeholder { /* Firefox 19+ */
-                        color: $dark-accent-400;
-                        opacity: 1;
-                    }
+.home-page main .cover .main-grid > div {
+  height: inherit; }
 
-                    :-moz-placeholder { /* Firefox 4 - 18 */
-                        color: $dark-accent-400;
-                        opacity: 1;
-                    }
-                    input {
-                        font-family: $montserrat;
-                        color: $dark-accent-400;
-                        width: 100%;
-                        padding: 12px 12px 12px 34px;
-                        border-radius: 3px;
-                        border: 1px solid $border;
-                        font-size: 13px;
-                        &:focus {
-                            outline: none;
-                        }
-                    }
-                }
-            }
-        }
-        .list-content {
-            padding-bottom: 60px;
-            h2 {
-                margin-bottom: 80px;
-                font-size: 32px;
-                font-family: $montserrat;
-                color: $dark-accent-400;
-                font-weight: 500;
-                text-align: center;
-            }
-            .see-more {
-                position: relative;
-                margin-top: 60px;
-                text-align: center;
-                font-family: $montserrat;
-                a {
-                    position: relative;
-                    padding: 0 10px;
-                    background: #fff;
-                    z-index: 1;
-                }
-                &:after {
-                    content: '';
-                    position: absolute;
-                    top: 10px;
-                    right: 0;
-                    left: 0;
-                    height: 1px;
-                    background: $border;
-                    z-index: 0;
-                }
-            }
-        }
-        .explore {
-            text-align: center;
-            padding: 60px 0;
-            h3 {
-                margin-bottom: 30px;
-                font-size: 32px;
-                font-weight: 300;
-                font-family: $open;
-                color: $dark-accent-400;
-            }
-            .text {
-                margin-bottom: 40px;
-            }
-        }
-        .sign-up {
-            margin-top: 60px;
-            padding: 120px 0;
-            background: #384E74;
-            text-align: center;
-            h3 {
-                margin-bottom: 30px;
-                font-size: 32px;
-                font-weight: 300;
-                font-family: $open;
-                color: #fff;
-            }
-            .text {
-                margin-bottom: 40px;
-                color: #B0B8C7;
-            }
-        }
-    }
+.home-page main .cover .main-grid > div .title {
+  text-align: center; }
 
-    //footer, #creators-container, #consumer-container {
-    //    width: 800px;
-    //    margin: 0 auto;
-    //    padding: 50px;
-    //}
-}
+.home-page main .cover .main-grid > div .title * {
+  color: #fff;
+  font-family: "Montserrat", sans-serif; }
+
+.home-page main .cover .main-grid > div .title h1 {
+  margin-bottom: 20px;
+  font-weight: 500; }
+
+.home-page main .cover .main-grid > div .title h1 span {
+  text-decoration: underline; }
+
+.home-page main .cover .main-grid > div .title .text {
+  margin-bottom: 40px;
+  letter-spacing: 0.76px; }
+
+.home-page main .cover .main-grid > div .title .cta-grey {
+  width: 190px; }
+
+.home-page main .search-block {
+  margin-bottom: 80px;
+  border-bottom: 1px solid #EBEDF1; }
+
+.home-page main .search-block .search {
+  padding: 40px 0; }
+
+.home-page main .search-block .search span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  margin: 0 10px;
+  color: #94A0B5; }
+
+.home-page main .search-block .search label {
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 180px); }
+
+.home-page main .search-block .search label:before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  width: 12px;
+  height: 13px;
+  background: url("../../../assets/images/icons/search.svg");
+  background-size: 12px 13px; }
+
+.home-page main .search-block .search label ::-webkit-input-placeholder {
+  /* Chrome */
+  color: #7F8A9E; }
+
+.home-page main .search-block .search label :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #7F8A9E; }
+
+.home-page main .search-block .search label ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #7F8A9E;
+  opacity: 1; }
+
+.home-page main .search-block .search label :-moz-placeholder {
+  /* Firefox 4 - 18 */
+  color: #7F8A9E;
+  opacity: 1; }
+
+.home-page main .search-block .search label input {
+  font-family: "Montserrat", sans-serif;
+  color: #7F8A9E;
+  width: 100%;
+  padding: 12px 12px 12px 34px;
+  border-radius: 3px;
+  border: 1px solid #EBEDF1;
+  font-size: 13px; }
+
+.home-page main .search-block .search label input:focus {
+  outline: none; }
+
+.home-page main .list-content {
+  padding-bottom: 60px; }
+
+.home-page main .list-content h2 {
+  margin-bottom: 80px;
+  font-size: 32px;
+  font-family: "Montserrat", sans-serif;
+  color: #7F8A9E;
+  font-weight: 500;
+  text-align: center; }
+
+.home-page main .list-content .see-more {
+  position: relative;
+  margin-top: 60px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif; }
+
+.home-page main .list-content .see-more a {
+  position: relative;
+  padding: 0 10px;
+  background: #fff;
+  z-index: 1; }
+
+.home-page main .list-content .see-more:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: #EBEDF1;
+  z-index: 0; }
+
+.home-page main .explore {
+  text-align: center;
+  padding: 60px 0; }
+
+.home-page main .explore h3 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  color: #7F8A9E; }
+
+.home-page main .explore .text {
+  margin-bottom: 40px; }
+
+.home-page main .sign-up {
+  margin-top: 60px;
+  padding: 120px 0;
+  background: #384E74;
+  text-align: center; }
+
+.home-page main .sign-up h3 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  color: #fff; }
+
+.home-page main .sign-up .text {
+  margin-bottom: 40px;
+  color: #B0B8C7; }
 
 @media only screen and (max-width: 768px) {
-    .home-page {
-        main {
-            .cover {
-                > img {
-                    display: none;
-                }
-                .main-grid {
-                    > img {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-}
+  .home-page main .cover > img {
+    display: none; }
+  .home-page main .cover .main-grid > img {
+    display: none; } }
 
 @media only screen and (max-width: 480px) {
-    .home-page {
-        header {
-
-        }
-        main {
-            &.homemain {
-                margin-top: 40px;
-            }
-            .cover {
-                .main-grid {
-                    > div {
-                        .title {
-                            * {
-                            }
-                            h1 {
-                                font-size: 22px;
-                                line-height: 27px;
-                                span {
-                                }
-                            }
-                            .text {
-                                font-size: 14px;
-                            }
-                        }
-                    }
-                }
-            }
-            .search-block {
-                margin-bottom: 60px;
-                .search {
-                    padding: 30px 0;
-                    text-align: center;
-                    > span {
-                        display: block;
-                        margin: 15px 0;
-                    }
-                    label {
-                        width: 100%;
-                        &:before {
-                        }
-                        input {
-                        }
-                    }
-                }
-            }
-            .list-content {
-                padding-bottom: 40px;
-                h2 {
-                    font-size: 19px;
-                    margin-bottom: 60px;
-                }
-                .see-more {
-                    margin-top: 50px;
-                }
-            }
-            .explore {
-                padding: 40px 0;
-                h3 {
-                    font-size: 19px;
-                }
-                .text {
-                    font-size: 13px;
-                }
-            }
-            .sign-up {
-                margin-top: 40px;
-                padding: 80px 0;
-                background: #384E74;
-                text-align: center;
-                h3 {
-                    margin-bottom: 30px;
-                    font-size: 32px;
-                    font-weight: 300;
-                    font-family: $open;
-                    color: #fff;
-                }
-                .text {
-                    margin-bottom: 40px;
-                    color: #B0B8C7;
-                }
-            }
-        }
-    }
-}
-
-
+  .home-page main.homemain {
+    margin-top: 40px; }
+  .home-page main .cover .main-grid > div .title h1 {
+    font-size: 22px;
+    line-height: 27px; }
+  .home-page main .cover .main-grid > div .title .text {
+    font-size: 14px; }
+  .home-page main .search-block {
+    margin-bottom: 60px; }
+  .home-page main .search-block .search {
+    padding: 30px 0;
+    text-align: center; }
+  .home-page main .search-block .search > span {
+    display: block;
+    margin: 15px 0; }
+  .home-page main .search-block .search label {
+    width: 100%; }
+  .home-page main .list-content {
+    padding-bottom: 40px; }
+  .home-page main .list-content h2 {
+    font-size: 19px;
+    margin-bottom: 60px; }
+  .home-page main .list-content .see-more {
+    margin-top: 50px; }
+  .home-page main .explore {
+    padding: 40px 0; }
+  .home-page main .explore h3 {
+    font-size: 19px; }
+  .home-page main .explore .text {
+    font-size: 13px; }
+  .home-page main .sign-up {
+    margin-top: 40px;
+    padding: 80px 0;
+    background: #384E74;
+    text-align: center; }
+  .home-page main .sign-up h3 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif;
+    color: #fff; }
+  .home-page main .sign-up .text {
+    margin-bottom: 40px;
+    color: #B0B8C7; } }

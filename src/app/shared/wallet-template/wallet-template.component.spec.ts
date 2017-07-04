@@ -4,7 +4,7 @@ import {RouterTestingModule} from '@angular/router/testing';
 import {WalletTemplateComponent} from './wallet-template.component';
 import {HeaderComponent} from '../header/header.component';
 import {FooterComponent} from '../footer/footer.component';
-import {AuthService} from '../../core/services/auth.service';
+// import {AuthService} from '../../core/services/auth.service';
 import {DecentCoreService} from '../../core/services/decent-core.service';
 import {CryptService} from '../../core/services/crypt.service';
 import {AccountService} from '../../core/services/account.service';
@@ -21,7 +21,7 @@ describe('WalletTemplateComponent', () => {
                 HttpModule,
                 RouterTestingModule
             ],
-            providers: [AuthService, AccountService, CryptService, DecentCoreService]
+            providers: [AccountService, CryptService, DecentCoreService]
         })
             .compileComponents();
     }));

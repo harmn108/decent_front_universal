@@ -1,21 +1,15 @@
-.transfer {
-    form {
-        > div {
-            margin: 0 -15px;
-            //flex-wrap: wrap;
-            > div {
-                padding: 0 15px;
-            }
-        }
-        md-input-container {
-            width: 100%;
-        }
-        .current-balanse {
-            margin-bottom: 20px;
-        }
-        button {
-            margin-top: 34px;
-            margin-bottom: 55px;
-        }
-    }
-}
+.transfer form > div {
+  margin: 0 -15px; }
+
+.transfer form > div > div {
+  padding: 0 15px; }
+
+.transfer form md-input-container {
+  width: 100%; }
+
+.transfer form .current-balanse {
+  margin-bottom: 20px; }
+
+.transfer form button {
+  margin-top: 34px;
+  margin-bottom: 55px; }

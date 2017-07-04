@@ -9,7 +9,7 @@ import {HttpModule} from '@angular/http';
 import {DecentCoreService} from '../../core/services/decent-core.service';
 import {CryptService} from '../../core/services/crypt.service';
 import {RouterTestingModule} from '@angular/router/testing';
-import {AuthService} from '../../core/services/auth.service';
+// import {AuthService} from '../../core/services/auth.service';
 
 
 describe('LoginComponent', () => {
@@ -26,7 +26,7 @@ describe('LoginComponent', () => {
         RouterTestingModule,
         HttpModule
       ],
-      providers: [ AccountService, DecentCoreService, CryptService, AuthService]
+      providers: [ AccountService, DecentCoreService, CryptService]
     })
       .compileComponents();
   }));

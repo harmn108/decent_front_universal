@@ -1,105 +1,64 @@
-@import "../../../assets/variable";
+.add-item-1-3 div.active-color {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif; }
 
-.add-item-1-3 {
-    div.active-color {
-        margin-bottom: 30px;
-        font-size: 20px;
-        font-weight: 600;
-        font-family: $montserrat;
-    }
-    .block-1 {
-        margin-bottom: 30px;
-        .upload-img {
-            margin-right: 35px;
-            h3 {
-                font-weight: 400;
-            }
-            &.new {
-                .img {
-                    border: 1px solid $border;
-                    box-shadow: 0 10px 30px -10px rgba(184, 192, 207, 0.45);
-                    i {
-                        font-size: 30px;
-                        color: $dark-accent-400;
-                    }
-                }
-            }
-            .img {
-                width: 120px;
-                height: 120px;
-                border-radius: 3px;
-                overflow: hidden;
-                background: #fff;
-                margin-bottom: 20px;
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-            .cta-grey {
-                min-width: 120px !important;
-                margin-bottom: 20px;
-            }
-            .size-info {
+.add-item-1-3 .block-1 {
+  margin-bottom: 30px; }
 
-            }
-        }
-        .name-description {
-            width: 330px;
+.add-item-1-3 .block-1 .upload-img {
+  margin-right: 35px; }
 
-        }
-    }
-    .block-2 {
-        margin-bottom: 30px;
-    }
-    .next {
-        margin-bottom: 50px;
-    }
-    .mat-select {
-        width: 100%;
-    }
-}
+.add-item-1-3 .block-1 .upload-img h3 {
+  font-weight: 400; }
+
+.add-item-1-3 .block-1 .upload-img.new .img {
+  border: 1px solid #EBEDF1;
+  box-shadow: 0 10px 30px -10px rgba(184, 192, 207, 0.45); }
+
+.add-item-1-3 .block-1 .upload-img.new .img i {
+  font-size: 30px;
+  color: #7F8A9E; }
+
+.add-item-1-3 .block-1 .upload-img .img {
+  width: 120px;
+  height: 120px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 20px; }
+
+.add-item-1-3 .block-1 .upload-img .img img {
+  width: 100%;
+  height: 100%; }
+
+.add-item-1-3 .block-1 .upload-img .cta-grey {
+  min-width: 120px !important;
+  margin-bottom: 20px; }
+
+.add-item-1-3 .block-1 .name-description {
+  width: 330px; }
+
+.add-item-1-3 .block-2 {
+  margin-bottom: 30px; }
+
+.add-item-1-3 .next {
+  margin-bottom: 50px; }
+
+.add-item-1-3 .mat-select {
+  width: 100%; }
 
 @media only screen and (max-width: 480px) {
-    .add-item-1-3 {
-        .block-1 {
-            //margin: 0;
-            .upload-img {
-                width: 100%;
-                margin-right: 0;
-                margin-bottom: 20px;
-                h3 {
-                }
-                .size-info {
-                    display: inline-block;
-                }
-                &.new {
-                    .img {
-                        i {
-                        }
-                    }
-                }
-                .img {
-                    img {
-                    }
-                }
-                .cta-grey {
-                    vertical-align: middle;
-                    margin-right: 20px;
-                    margin-bottom: 0;
-                }
-                .size-info {
-                    vertical-align: middle;
-                }
-            }
-            .name-description {
-            }
-        }
-        .block-2 {
-        }
-        .next {
-        }
-        .mat-select {
-        }
-    }
-}
+  .add-item-1-3 .block-1 .upload-img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px; }
+  .add-item-1-3 .block-1 .upload-img .size-info {
+    display: inline-block; }
+  .add-item-1-3 .block-1 .upload-img .cta-grey {
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-bottom: 0; }
+  .add-item-1-3 .block-1 .upload-img .size-info {
+    vertical-align: middle; } }

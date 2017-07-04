@@ -1,7 +1,7 @@
 import {TestBed, async, inject} from '@angular/core/testing';
 
 import {AuthGuard} from './auth.guard';
-import {AuthService} from '../../core/services/auth.service';
+// import {AuthService} from '../../core/services/auth.service';
 import {RouterTestingModule} from '@angular/router/testing';
 import {AccountService} from '../../core/services/account.service';
 import {HttpModule} from '@angular/http';
@@ -15,7 +15,7 @@ describe('AuthGuard', () => {
                 RouterTestingModule,
                 HttpModule
             ],
-            providers: [AuthGuard, AuthService, AccountService, CryptService, DecentCoreService]
+            providers: [AuthGuard, AccountService, CryptService, DecentCoreService]
         });
     });
 

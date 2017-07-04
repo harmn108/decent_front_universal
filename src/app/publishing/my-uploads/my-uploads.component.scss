@@ -1,109 +1,80 @@
-@import "../../../assets/variable";
+.my-uploads .cta-green {
+  margin-bottom: 40px; }
 
-.my-uploads {
-    .cta-green {
-        margin-bottom: 40px;
-    }
-    > ul, .loader {
-        margin-bottom: 20px;
-        > li, > div {
-            padding: 16px 0 16px 10px;
-            border-top: 1px solid $border;
-            span {
-                display: block;
-                font-weight: 400;
-            }
-            &:first-of-type {
-                border: none;
-            }
-            a {
-                color: $dark-accent-400;
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-            div {
-                ul {
-                    text-align: right;
-                    .edit {
-                        a {
-                            text-decoration: underline;
-                        }
-                        i {
-                            font-size: 10px;
-                            margin-right: 5px;
-                            color: $dark-accent-400;
-                        }
-                    }
-                    .delete {
-                        margin-left: 20px;
-                        a {
-                            color: $caption;
-                        }
-                    }
-                }
-                &:first-of-type {
-                    text-transform: uppercase;
-                }
-            }
-        }
-    }
-    .loader {
-        margin-bottom: 0;
-        border-bottom: 1px solid $border;
-        h3 {
-            margin-bottom: 10px;
-            span {
-                font-weight: 400;
-            }
-        }
-    }
-    .message {
-        margin-bottom: 50px;
-        color: $dark-accent-400;
-        font-weight: 400;
-        position: relative;
-        i {
-            position: absolute;
-            margin-right: 15px;
-            font-size: 16px;
-            vertical-align: middle;
-            color: $link;
-        }
-        div {
-            padding-left: 35px;
-        }
-    }
-}
+.my-uploads > ul, .my-uploads .loader {
+  margin-bottom: 20px; }
+
+.my-uploads > ul > li, .my-uploads > ul > div, .my-uploads .loader > li, .my-uploads .loader > div {
+  padding: 16px 0 16px 10px;
+  border-top: 1px solid #EBEDF1; }
+
+.my-uploads > ul > li span, .my-uploads > ul > div span, .my-uploads .loader > li span, .my-uploads .loader > div span {
+  display: block;
+  font-weight: 400; }
+
+.my-uploads > ul > li:first-of-type, .my-uploads > ul > div:first-of-type, .my-uploads .loader > li:first-of-type, .my-uploads .loader > div:first-of-type {
+  border: none; }
+
+.my-uploads > ul > li a, .my-uploads > ul > div a, .my-uploads .loader > li a, .my-uploads .loader > div a {
+  color: #7F8A9E; }
+
+.my-uploads > ul > li a:hover, .my-uploads > ul > div a:hover, .my-uploads .loader > li a:hover, .my-uploads .loader > div a:hover {
+  text-decoration: underline; }
+
+.my-uploads > ul > li div ul, .my-uploads > ul > div div ul, .my-uploads .loader > li div ul, .my-uploads .loader > div div ul {
+  text-align: right; }
+
+.my-uploads > ul > li div ul .edit a, .my-uploads > ul > div div ul .edit a, .my-uploads .loader > li div ul .edit a, .my-uploads .loader > div div ul .edit a {
+  text-decoration: underline; }
+
+.my-uploads > ul > li div ul .edit i, .my-uploads > ul > div div ul .edit i, .my-uploads .loader > li div ul .edit i, .my-uploads .loader > div div ul .edit i {
+  font-size: 10px;
+  margin-right: 5px;
+  color: #7F8A9E; }
+
+.my-uploads > ul > li div ul .delete, .my-uploads > ul > div div ul .delete, .my-uploads .loader > li div ul .delete, .my-uploads .loader > div div ul .delete {
+  margin-left: 20px; }
+
+.my-uploads > ul > li div ul .delete a, .my-uploads > ul > div div ul .delete a, .my-uploads .loader > li div ul .delete a, .my-uploads .loader > div div ul .delete a {
+  color: #FF7557; }
+
+.my-uploads > ul > li div:first-of-type, .my-uploads > ul > div div:first-of-type, .my-uploads .loader > li div:first-of-type, .my-uploads .loader > div div:first-of-type {
+  text-transform: uppercase; }
+
+.my-uploads .loader {
+  margin-bottom: 0;
+  border-bottom: 1px solid #EBEDF1; }
+
+.my-uploads .loader h3 {
+  margin-bottom: 10px; }
+
+.my-uploads .loader h3 span {
+  font-weight: 400; }
+
+.my-uploads .message {
+  margin-bottom: 50px;
+  color: #7F8A9E;
+  font-weight: 400;
+  position: relative; }
+
+.my-uploads .message i {
+  position: absolute;
+  margin-right: 15px;
+  font-size: 16px;
+  vertical-align: middle;
+  color: #E6AA03; }
+
+.my-uploads .message div {
+  padding-left: 35px; }
 
 @media only screen and (max-width: 720px) {
-    .my-uploads {
-        > ul, .loader {
-            > li, > div {
-                .purchase-name {
-                    a {
-                        display: inline-block;
-                        width: 140px;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                    }
-                }
-            }
-        }
-    }
-}
+  .my-uploads > ul > li .purchase-name a, .my-uploads > ul > div .purchase-name a, .my-uploads .loader > li .purchase-name a, .my-uploads .loader > div .purchase-name a {
+    display: inline-block;
+    width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; } }
 
 @media only screen and (max-width: 480px) {
-    .my-uploads {
-        > ul, .loader {
-            > li, > div {
-                .purchase-name {
-                    a {
-                        width: 80px;
-                    }
-                }
-            }
-        }
-    }
-}
+  .my-uploads > ul > li .purchase-name a, .my-uploads > ul > div .purchase-name a, .my-uploads .loader > li .purchase-name a, .my-uploads .loader > div .purchase-name a {
+    width: 80px; } }

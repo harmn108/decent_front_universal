@@ -3,7 +3,7 @@ import {RouterTestingModule} from '@angular/router/testing';
 
 import {TemplateComponent} from './template.component';
 import {HeaderComponent} from '../header/header.component';
-import {AuthService} from '../../core/services/auth.service';
+// import {AuthService} from '../../core/services/auth.service';
 import {DecentCoreService} from '../../core/services/decent-core.service';
 import {CryptService} from '../../core/services/crypt.service';
 import {AccountService} from '../../core/services/account.service';
@@ -20,7 +20,7 @@ describe('TemplateComponent', () => {
                 HttpModule,
                 RouterTestingModule
             ],
-            providers: [AuthService, AccountService, CryptService, DecentCoreService]
+            providers: [AccountService, CryptService, DecentCoreService]
         })
             .compileComponents();
     }));

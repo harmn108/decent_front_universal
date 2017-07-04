@@ -1,56 +1,43 @@
-@import "../../../assets/variable";
+.my-purchases-item .artist {
+  margin-bottom: 40px; }
 
-.my-purchases-item {
-    .artist {
-        margin-bottom: 40px;
-    }
-    .img {
-        width: 120px;
-        height: 120px;
-        border-radius: 3px;
-        overflow: hidden;
-        background: #fff;
-        margin-bottom: 20px;
-        img {
-            width: 100%;
-            height: 100%;
-        }
-    }
-    .price {
-        font-size: 20px;
-        font-weight: 600;
-        font-family: $montserrat;
-        margin-bottom: 40px;
-    }
-    .about {
-        .text {
-            border-bottom: 1px solid $border;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-            .category {
-                margin-bottom: 25px;
-            }
-        }
-        ul {
-            li {
-                width: 100%;
-                div {
-                    margin-bottom: 30px;
-                    padding-right: 10px;
-                }
-            }
-        }
-    }
-    .buttons {
-        margin-bottom: 50px
-    }
-}
+.my-purchases-item .img {
+  width: 120px;
+  height: 120px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 20px; }
+
+.my-purchases-item .img img {
+  width: 100%;
+  height: 100%; }
+
+.my-purchases-item .price {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 40px; }
+
+.my-purchases-item .about .text {
+  border-bottom: 1px solid #EBEDF1;
+  padding-bottom: 20px;
+  margin-bottom: 20px; }
+
+.my-purchases-item .about .text .category {
+  margin-bottom: 25px; }
+
+.my-purchases-item .about ul li {
+  width: 100%; }
+
+.my-purchases-item .about ul li div {
+  margin-bottom: 30px;
+  padding-right: 10px; }
+
+.my-purchases-item .buttons {
+  margin-bottom: 50px; }
 
 @media only screen and (max-width: 768px) {
-    .buttons {
-        .cta-green {
-            width: 220px !important;
-            text-align: left;
-        }
-    }
-}
+  .buttons .cta-green {
+    width: 220px !important;
+    text-align: left; } }

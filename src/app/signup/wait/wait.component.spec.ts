@@ -7,7 +7,7 @@ import {SharedModule} from '../../shared/shared.module';
 import {CryptService} from '../../core/services/crypt.service';
 import {RouterTestingModule} from '@angular/router/testing';
 import {DecentCoreService} from '../../core/services/decent-core.service';
-import {AuthService} from '../../core/services/auth.service';
+// import {AuthService} from '../../core/services/auth.service';
 
 describe('WaitComponent', () => {
     let component: WaitComponent;
@@ -21,7 +21,7 @@ describe('WaitComponent', () => {
                 SharedModule,
                 RouterTestingModule
             ],
-            providers: [AccountService, CryptService, DecentCoreService, AuthService]
+            providers: [AccountService, CryptService, DecentCoreService]
         })
             .compileComponents();
     }));

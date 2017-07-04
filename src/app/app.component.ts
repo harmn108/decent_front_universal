@@ -31,7 +31,7 @@ import { Cookie } from 'ng2-cookies';
         )
     ],
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
     public showCookieMessage: boolean;

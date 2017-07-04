@@ -1,84 +1,57 @@
-@import "../../../assets/variable";
+.purchases ul li {
+  padding: 16px 0 16px 10px;
+  border-top: 1px solid #EBEDF1; }
 
-.purchases {
-    ul {
-        li {
-            padding: 16px 0 16px 10px;
-            border-top: 1px solid $border;
-            span {
-                display: block;
-                font-weight: 400;
-            }
-            &:first-of-type {
-                border: none;
-            }
-            a {
-                color: $dark-accent-400;
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-            div {
-                &:last-of-type {
-                    text-align: right;
-                    .cta-green {
-                        min-width: inherit !important;
-                    }
-                    i {
-                        display: none;
-                        font-size: 14px !important;
-                    }
-                }
-                &:first-of-type {
-                    text-transform: uppercase;
-                }
-            }
-        }
-    }
-    .empty {
-        padding-top: 16px;
-        font-size: 12px;
-        border-top: 1px solid $border;
-        color: $dark-accent-400;
-        padding-left: 10px;
-    }
-}
+.purchases ul li span {
+  display: block;
+  font-weight: 400; }
+
+.purchases ul li:first-of-type {
+  border: none; }
+
+.purchases ul li a {
+  color: #7F8A9E; }
+
+.purchases ul li a:hover {
+  text-decoration: underline; }
+
+.purchases ul li div:last-of-type {
+  text-align: right; }
+
+.purchases ul li div:last-of-type .cta-green {
+  min-width: inherit !important; }
+
+.purchases ul li div:last-of-type i {
+  display: none;
+  font-size: 14px !important; }
+
+.purchases ul li div:first-of-type {
+  text-transform: uppercase; }
+
+.purchases .empty {
+  padding-top: 16px;
+  font-size: 12px;
+  border-top: 1px solid #EBEDF1;
+  color: #7F8A9E;
+  padding-left: 10px; }
 
 @media only screen and (max-width: 768px) {
-    .purchases {
-        padding: 0;
-        ul {
-            li {
-                a {
-                    display: inline-block;
-                    width: 140px;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                }
-            }
-        }
-    }
-}
+  .purchases {
+    padding: 0; }
+  .purchases ul li a {
+    display: inline-block;
+    width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; } }
 
 @media only screen and (max-width: 480px) {
-    .purchases {
-        padding: 0;
-        ul {
-            li {
-                div {
-                    &:last-of-type {
-                        text-align: center;
-                        i {
-                            display: inline-block;
-                            margin-right: 0;
-                        }
-                        span {
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+  .purchases {
+    padding: 0; }
+  .purchases ul li div:last-of-type {
+    text-align: center; }
+  .purchases ul li div:last-of-type i {
+    display: inline-block;
+    margin-right: 0; }
+  .purchases ul li div:last-of-type span {
+    display: none; } }

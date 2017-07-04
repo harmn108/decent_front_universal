@@ -1,90 +1,64 @@
-@import "../../../assets/variable";
+.security .phrase-hint li {
+  border-bottom: 1px solid #EBEDF1;
+  padding: 14px 10px;
+  font-family: "Open Sans", sans-serif; }
 
-.security {
-    .phrase-hint {
-        li {
-            border-bottom: 1px solid $border;
-            padding: 14px 10px;
-            font-family: $open;
-            &.opened {
-                background: #F6F8FB;
-            }
-            .button-phrase, .button-hint {
-                > div:first-of-type {
-                    font-size: 15px;
-                    font-weight: 600;
-                    color: $dark-accent-400;
-                }
-                > div:last-of-type {
-                    text-align: right;
-                }
-                .drop-prase {
-                    background: #F6F8FB;
-                }
-                .active-color {
-                    a {
-                        color: $primary;
-                    }
-                }
-            }
-            .drop-prase {
-                .phras-content {
-                    max-width: 400px;
-                    padding: 26px 10px 16px;
-                    .text {
-                        &:first-of-type {
-                            margin-bottom: 30px;
-                            line-height: 26px;
-                        }
-                        &:last-of-type {
-                            margin-bottom: 40px;
-                        }
-                    }
-                }
-            }
-            .drop-hint {
-                .hint-content {
-                    max-width: 400px;
-                    padding: 20px 10px;
-                    .hint {
-                        margin-bottom: 0;
-                    }
-                    .text {
-                        margin-bottom: 30px;
-                    }
-                    md-input-container {
-                        display: block;
-                    }
-                    button {
-                        margin-top: 14px;
-                    }
-                }
-            }
-            &:last-of-type {
-                border: none
-            }
-        }
-    }
-    .text {
-        font-size: 15px;
-        color: $dark-accent-400;
-    }
-    button {
-        padding: 12px 20px;
-    }
-}
+.security .phrase-hint li.opened {
+  background: #F6F8FB; }
 
-@media only screen and (max-width: 940px) {
+.security .phrase-hint li .button-phrase > div:first-of-type, .security .phrase-hint li .button-hint > div:first-of-type {
+  font-size: 15px;
+  font-weight: 600;
+  color: #7F8A9E; }
 
-}
+.security .phrase-hint li .button-phrase > div:last-of-type, .security .phrase-hint li .button-hint > div:last-of-type {
+  text-align: right; }
+
+.security .phrase-hint li .button-phrase .drop-prase, .security .phrase-hint li .button-hint .drop-prase {
+  background: #F6F8FB; }
+
+.security .phrase-hint li .button-phrase .active-color a, .security .phrase-hint li .button-hint .active-color a {
+  color: #1FDA81; }
+
+.security .phrase-hint li .drop-prase .phras-content {
+  max-width: 400px;
+  padding: 26px 10px 16px; }
+
+.security .phrase-hint li .drop-prase .phras-content .text:first-of-type {
+  margin-bottom: 30px;
+  line-height: 26px; }
+
+.security .phrase-hint li .drop-prase .phras-content .text:last-of-type {
+  margin-bottom: 40px; }
+
+.security .phrase-hint li .drop-hint .hint-content {
+  max-width: 400px;
+  padding: 20px 10px; }
+
+.security .phrase-hint li .drop-hint .hint-content .hint {
+  margin-bottom: 0; }
+
+.security .phrase-hint li .drop-hint .hint-content .text {
+  margin-bottom: 30px; }
+
+.security .phrase-hint li .drop-hint .hint-content md-input-container {
+  display: block; }
+
+.security .phrase-hint li .drop-hint .hint-content button {
+  margin-top: 14px; }
+
+.security .phrase-hint li:last-of-type {
+  border: none; }
+
+.security .text {
+  font-size: 15px;
+  color: #7F8A9E; }
+
+.security button {
+  padding: 12px 20px; }
 
 @media only screen and (max-width: 480px) {
-    .security {
-        padding: 0;
-        .phras-content {
-            button {
-                width: 100%;
-            }
-        }
-    }
-}
+  .security {
+    padding: 0; }
+  .security .phras-content button {
+    width: 100%; } }

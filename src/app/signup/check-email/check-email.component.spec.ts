@@ -6,7 +6,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AccountService} from '../../core/services/account.service';
 import {HttpModule} from '@angular/http';
 import {CryptService} from '../../core/services/crypt.service';
-import {AuthService} from '../../core/services/auth.service';
+// import {AuthService} from '../../core/services/auth.service';
 import {DecentCoreService} from '../../core/services/decent-core.service';
 import {RouterTestingModule} from '@angular/router/testing';
 
@@ -23,7 +23,7 @@ describe('CheckEmailComponent', () => {
                 HttpModule,
                 RouterTestingModule
             ],
-            providers: [AccountService, CryptService, AuthService, DecentCoreService]
+            providers: [AccountService, CryptService, DecentCoreService]
         })
             .compileComponents();
     }));

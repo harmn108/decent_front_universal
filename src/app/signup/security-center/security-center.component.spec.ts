@@ -7,7 +7,7 @@ import {SharedModule} from '../../shared/shared.module';
 import {RouterTestingModule} from '@angular/router/testing';
 import {CryptService} from '../../core/services/crypt.service';
 import {DecentCoreService} from '../../core/services/decent-core.service';
-import {AuthService} from '../../core/services/auth.service';
+// import {AuthService} from '../../core/services/auth.service';
 
 describe('SecurityCenterComponent', () => {
     let component: SecurityCenterComponent;
@@ -20,7 +20,7 @@ describe('SecurityCenterComponent', () => {
                 HttpModule,
                 SharedModule,
                 RouterTestingModule],
-            providers: [AccountService, CryptService, DecentCoreService, AuthService]
+            providers: [AccountService, CryptService, DecentCoreService]
         })
             .compileComponents();
     }));

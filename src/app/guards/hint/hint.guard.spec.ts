@@ -7,7 +7,7 @@ import {SharedModule} from '../../shared/shared.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CryptService} from '../../core/services/crypt.service';
 import {RouterTestingModule} from '@angular/router/testing';
-import {AuthService} from '../../core/services/auth.service';
+// import {AuthService} from '../../core/services/auth.service';
 import {DecentCoreService} from '../../core/services/decent-core.service';
 
 describe('HintGuard', () => {
@@ -19,7 +19,7 @@ describe('HintGuard', () => {
                 HttpModule,
                 RouterTestingModule
             ],
-            providers: [HintGuard, AccountService, CryptService, DecentCoreService, AuthService]
+            providers: [HintGuard, AccountService, CryptService, DecentCoreService]
         });
     });
 

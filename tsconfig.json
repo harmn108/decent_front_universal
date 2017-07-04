@@ -10,6 +10,10 @@
     "target": "es5",
     "sourceMap": true,
     "allowJs": true,
+    "types": [
+      "jasmine",
+      "node"
+    ],
     "typeRoots": [
       "node_modules/@types"
     ],

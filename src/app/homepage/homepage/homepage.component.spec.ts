@@ -11,7 +11,7 @@ import {DecentCoreService} from '../../core/services/decent-core.service';
 import {SharedModule} from '../../shared/shared.module';
 import {CoreModule} from '../../core/core.module';
 import {RouterTestingModule} from '@angular/router/testing';
-import {AuthService} from '../../core/services/auth.service';
+// import {AuthService} from '../../core/services/auth.service';
 import {HttpModule} from '@angular/http';
 
 describe('HomepageComponent', () => {
@@ -36,8 +36,7 @@ describe('HomepageComponent', () => {
             ],
             providers: [
                 ContentService,
-                DecentCoreService,
-                AuthService
+                DecentCoreService
             ]
         })
             .compileComponents();

@@ -1,35 +1,28 @@
-@import "../../../assets/variable";
-
 .text {
-    margin-bottom: 40px;
-    font-size: 15px;
-    &:first-of-type {
-        line-height: 26px;
-        margin-bottom: 30px;
-        color: $dark-accent-400;
-    }
-}
+  margin-bottom: 40px;
+  font-size: 15px; }
+
+.text:first-of-type {
+  line-height: 26px;
+  margin-bottom: 30px;
+  color: #7F8A9E; }
 
 .link {
-    margin-bottom: 5px;
-}
+  margin-bottom: 5px; }
 
 .cta-green {
-    margin-bottom: 30px;
-}
+  margin-bottom: 30px; }
 
 .phras-content {
-    max-width: 400px;
-    padding: 26px 10px 16px;
-}
+  max-width: 400px;
+  padding: 26px 10px 16px; }
 
 .pb-pr-key {
-    margin-bottom: 30px;
-    h2 {
-        margin: 0;
-    }
-    h3 {
-        margin-bottom: 20px;
-        font-weight: 400;
-    }
-}
+  margin-bottom: 30px; }
+
+.pb-pr-key h2 {
+  margin: 0; }
+
+.pb-pr-key h3 {
+  margin-bottom: 20px;
+  font-weight: 400; }

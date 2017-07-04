@@ -1,18 +1,17 @@
 .text {
-    margin-bottom: 50px;
-    h2 {
-        font-size: 24px;
-    }
-    h3 {
-        font-size: 19px;
-    }
-    ul {
-        list-style-type: none;
-        li {
-            margin: 10px 0;
-        }
-    }
-    h1, h2, h3, h4, h5, h6 {
-        line-height: normal;
-    }
-}
+  margin-bottom: 50px; }
+
+.text h2 {
+  font-size: 24px; }
+
+.text h3 {
+  font-size: 19px; }
+
+.text ul {
+  list-style-type: none; }
+
+.text ul li {
+  margin: 10px 0; }
+
+.text h1, .text h2, .text h3, .text h4, .text h5, .text h6 {
+  line-height: normal; }

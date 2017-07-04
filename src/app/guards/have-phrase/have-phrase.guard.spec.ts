@@ -8,7 +8,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CryptService} from '../../core/services/crypt.service';
 import {RouterTestingModule} from '@angular/router/testing';
 import {DecentCoreService} from '../../core/services/decent-core.service';
-import {AuthService} from '../../core/services/auth.service';
+// import {AuthService} from '../../core/services/auth.service';
 
 describe('HavePhraseGuard', () => {
     beforeEach(() => {
@@ -19,7 +19,7 @@ describe('HavePhraseGuard', () => {
                 HttpModule,
                 RouterTestingModule
             ],
-            providers: [HavePhraseGuard, AccountService, CryptService, DecentCoreService, AuthService]
+            providers: [HavePhraseGuard, AccountService, CryptService, DecentCoreService]
         });
     });
 

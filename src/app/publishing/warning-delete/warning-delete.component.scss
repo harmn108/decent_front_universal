@@ -1,13 +1,8 @@
-@import "../../../assets/variable";
+.warning-delete h2 {
+  margin-bottom: 40px; }
 
-.warning-delete {
-    h2 {
-        margin-bottom: 40px;
-    }
-    .cta-green {
-        margin-right: 30px;
-    }
-    .delete {
-        margin-bottom: 50px;
-    }
-}
+.warning-delete .cta-green {
+  margin-right: 30px; }
+
+.warning-delete .delete {
+  margin-bottom: 50px; }

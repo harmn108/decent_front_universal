@@ -9,7 +9,7 @@ import {HttpModule} from '@angular/http';
 import {RouterTestingModule} from '@angular/router/testing';
 import {CryptService} from '../../core/services/crypt.service';
 import {DecentCoreService} from '../../core/services/decent-core.service';
-import {AuthService} from '../../core/services/auth.service';
+// import {AuthService} from '../../core/services/auth.service';
 
 describe('EnterEmailComponent', () => {
     let component: EnterEmailComponent;
@@ -24,7 +24,7 @@ describe('EnterEmailComponent', () => {
                 RouterTestingModule,
                 BrowserAnimationsModule
             ],
-            providers: [AccountService, CryptService, DecentCoreService, AuthService]
+            providers: [AccountService, CryptService, DecentCoreService]
         })
             .compileComponents();
     }));
